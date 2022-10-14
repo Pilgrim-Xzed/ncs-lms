@@ -1,58 +1,6 @@
-<div class="header_top home6">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-5 col-xl-5">
-        <ul class="home4_header_top_contact">
-          {{#phone}}
-            <li class="list-inline-item"><a href="tel:{{{phone}}}">{{{phone}}}</a></li>
-          {{/phone}}
-          {{#email_address}}
-            <li class="list-inline-item"><a href="mailto:{{{email_address}}}">{{{email_address}}}</a></li>
-          {{/email_address}}
-          {{#cta_text}}
-            <li class="list-inline-item">
-              {{#cta_link}}
-                <a href="{{{cta_link}}}">
-              {{/cta_link}}
-              <em>{{{cta_text}}}</em>
-              {{#cta_link}}
-                </a>
-              {{/cta_link}}
-            </li>
-          {{/cta_text}}
-        </ul>
-      </div>
-      <div class="col-lg-7 col-xl-7">
-        <ul class="sign_up_btn home6 dn-smd text-right">
-          {{> theme_edumy/ccn_navbar_user_popup }}
-          {{#header_search_bar}}
-            <li class="list-inline-item dn-1366">
-              <div class="ht_search_widget">
-                <div class="header_search_widget">
-                  {{{ccn_globalsearch_navbar}}}
-                </div>
-              </div>
-            </li>
-          {{/header_search_bar}}
-          {{!<li class="list-inline-item">
-            <div class="header_top_lang_widget_home6">
-              <select class="selectpicker show-tick">
-                <option>English</option>
-                <option>Frenc</option>
-                <option>Italian</option>
-                <option>Spanish</option>
-                <option>Turkey</option>
-              </select>
-            </div>
-          </li>}}
-        </ul><!-- Button trigger modal -->
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- Main Header Nav -->
-<header class="ccnHeader6 header-nav menu_style_home_six navbar-scrolltofixed main-menu">
+<header class="ccnHeader6 header-nav menu_style_home_six navbar-scrolltofixed main-menu" style="background: #0B4F2C">
   <div class="container">
     <!-- Ace Responsive Menu -->
     <nav class="ccn_nav_group">
@@ -69,7 +17,7 @@
         <a href="{{{ ccnLogoUrl }}}" class="navbar_brand float-left dn-smd">
           {{#logo_image}}<img class="logo1 img-fluid" src="{{{headerlogo2}}}" alt="{{{sitename}}}" {{#logo_styles}} style="{{{logo_styles}}}" {{/logo_styles}}>{{/logo_image}}
           {{#logo_image}}<img class="logo2 img-fluid" src="{{{headerlogo2}}}" alt="{{{sitename}}}" {{#logo_styles}} style="{{{logo_styles}}}" {{/logo_styles}}>{{/logo_image}}
-          {{#logotype}}<span>{{{sitename}}}</span>{{/logotype}}
+
         </a>
       {{/logo}}
       {{#display_library_list}}
@@ -124,6 +72,29 @@
           {{{ output.page_heading_menu }}}
         </ul>
       </nav>
+              <ul class="sign_up_btn home6 dn-smd text-right">
+          {{> theme_edumy/ccn_navbar_user_popup }}
+          {{#header_search_bar}}
+            <li class="list-inline-item dn-1366">
+              <div class="ht_search_widget">
+                <div class="header_search_widget">
+                  {{{ccn_globalsearch_navbar}}}
+                </div>
+              </div>
+            </li>
+          {{/header_search_bar}}
+          {{!<li class="list-inline-item">
+            <div class="header_top_lang_widget_home6">
+              <select class="selectpicker show-tick">
+                <option>English</option>
+                <option>Frenc</option>
+                <option>Italian</option>
+                <option>Spanish</option>
+                <option>Turkey</option>
+              </select>
+            </div>
+          </li>}}
+        </ul><!-- Button trigger modal -->
       <!--Note: declare the Menu style in the data-menu-style="horizontal" (options: horizontal, vertical, accordion) -->
       <ul id="respMenu" class="ml-0 mb-0" data-menu-style="horizontal">
         {{> theme_edumy/ccn_navbar_user }}
