@@ -18,7 +18,7 @@ $CFG->dboptions = array (
   'dbcollation' => 'utf8_general_ci',
 );
 
-$CFG->wwwroot   = 'http://localhost:8888/ncs-lms';
+$CFG->wwwroot   = 'http://localhost:8888/moodle';
 $CFG->dataroot  = '/Applications/MAMP/moodledata';
 $CFG->admin     = 'admin';
 

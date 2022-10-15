@@ -97,49 +97,30 @@ class block_cocoon_hero_5 extends block_base {
         if(!empty($this->config->subtitle)){$this->content->subtitle = $this->config->subtitle;}
         if ($ccnStorage->items > 0) {
           $this->content->text .= '
-          <div class="home-three home10-style">
+          <div class="home-three home10-style" style="background-color:white">
   <div class="container">
     <div class="row posr">
       <div class="col-lg-8">
         <div class="home-content home10">
           <div class="home-text">
-            <h2 data-ccn="title">'.format_text($this->content->title, FORMAT_HTML, array('filter' => true)).'</h2>
-            <p data-ccn="subtitle" class="color-white">'.format_text($this->content->subtitle, FORMAT_HTML, array('filter' => true)).'</p>
-            <div class="search_box_home4 home10">
-              <div class="ht_search_widget">
-                <div class="header_search_widget">';
-                // Begin Search form
-                if (\core_search\manager::is_global_search_enabled() === false) {
-                    $this->content->text = get_string('globalsearchdisabled', 'search');
-                    return $this->content;
-                }
-
-                $url = new moodle_url('/search/index.php');
-
-                $this->content->text .= html_writer::start_tag('form', array('class' => 'form-inline mailchimp_form', 'action' => $url->out()));
-                $this->content->text .= html_writer::start_tag('fieldset', array('action' => 'invisiblefieldset'));
-
-                // Input.
-                $inputoptions = array('id' => 'searchform_search', 'name' => 'q', 'class' => 'form-control mb-2 mr-sm-2', 'placeholder' => get_string('search_string', 'theme_edumy'),
-                    'type' => 'text', 'size' => '15');
-                $this->content->text .= html_writer::empty_tag('input', $inputoptions);
-
-                // Context id.
-                if ($this->page->context && $this->page->context->contextlevel !== CONTEXT_SYSTEM) {
-                    $this->content->text .= html_writer::empty_tag('input', ['type' => 'hidden',
-                            'name' => 'context', 'value' => $this->page->context->id]);
-                }
-
-                $this->content->text .= '<button type="submit" class="btn btn-primary mb-2"><span class="flaticon-magnifying-glass"></span></button>';
-                $this->content->text .= html_writer::end_tag('fieldset');
-                $this->content->text .= html_writer::end_tag('form');
-                // End Search form
-
-                $this->content->text .='
-                </div>
+            <h2 data-ccn="title" class="color-black-mod" >'.format_text($this->content->title, FORMAT_HTML, array('filter' => true)).'</h2>
+            <p data-ccn="subtitle" class="color-black-mod">'.format_text($this->content->subtitle, FORMAT_HTML, array('filter' => true)).'</p>
+            
+            <button style="display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 15.5788px 12.9823px;
+           
+            width: 235.78px;
+            height: 62.16px;
+            left: 120px;
+            top: 411.43px;
+            font-size: 17.3098px;
+            background: #0B4F2C;
+            border-radius: 8.6549px;
+            ">Access your courses</button>
               </div>
-            </div>
-          </div>
+          
         </div>
       </div>
       <div class="col-lg-4">
